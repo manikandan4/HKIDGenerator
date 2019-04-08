@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.HKIDController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="370.0" prefWidth="615.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Button fx:id="GenerateID" layoutX="464.0" layoutY="275.0" mnemonicParsing="false" onAction="#GenerateHKID" text="Generate HKID" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="132.0" layoutY="14.0" prefHeight="38.0" prefWidth="358.0" text="DCO - HKID Generator" textAlignment="CENTER">
+               <font>
+                  <Font name="Andale Mono" size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="241.0" text="HKID :" />
+            <TextField fx:id="OutputTextField" layoutX="28.0" layoutY="269.0" prefHeight="38.0" prefWidth="227.0" />
+            <RadioButton fx:id="PrefixSingle" layoutX="28.0" layoutY="94.0" mnemonicParsing="false" text="Prefix _  with single Alphabet">
+               <toggleGroup>
+                  <ToggleGroup fx:id="PrefixChoice" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="PrefixDouble" layoutX="28.0" layoutY="129.0" mnemonicParsing="false" text="Prefix _  with two Alphabet" toggleGroup="$PrefixChoice" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
